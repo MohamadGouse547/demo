@@ -6,7 +6,6 @@ WORKDIR /var/www/html
 RUN unzip kindle.zip
 RUN cp -rvf markups-kindle/* .
 RUN rm -rf __MACOSX markups-kindle kindle.zip
-CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 EXPOSE 80
 
 
