@@ -6,5 +6,5 @@ WORKDIR /var/www/html
 RUN unzip kindle.zip
 RUN cp -rvf markups-kindle/* .
 RUN rm -rf __MACOSX markups-kindle kindle.zip
-CMD ["systemctl start apache2", "systemctl enable apache2"]
+CMD ["usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
