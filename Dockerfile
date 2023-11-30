@@ -7,7 +7,4 @@ RUN unzip kindle.zip
 RUN cp -rvf markups-kindle/* .
 RUN rm -rf __MACOSX markups-kindle kindle.zip
 CMD ["systemctl start apache2", "systemctl enable apache2"]
-EXPOSE 9000
-
-
-
+EXPOSE 80
